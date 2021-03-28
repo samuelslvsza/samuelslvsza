@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <audio  id="myAudio" src="ＡＵＴＵＭＮ　ＣＨＩＬＬ.mp3"></audio>
+
+</head>
+<body>
+    <div id="musica">
+        <div id="photo">
+            <div id="circulo">
+            </div>
+            <img src="foto.png" width="200px" id="foto">
+        </div>
+
+        <i id="icon_music" class="fas fa-play" onclick="musica(); rodar(); efeitoSombra(); icone()"></i>
+        <h1>Samuel Silva</h1>
+        <h2>Olá! Eu amei te ver por aqui, seja bem-vindo(a) e fique à vontade!</h2>
+        <p>Sou um Júnior na programação, com experiências em JavaScript, React, e HTML & CSS</p>
+
+
+    </div>
+        <div id="redes_sociais">Siga-me!</div>
+    <div id="div">
+        <a href="https://github.com/samuelslvsza" target='blank'>
+            <button onmousemove="git()" onmouseout="none()">
+                <i class="fab fa-github"></i>
+            </button>
+        </a>
+        <a href="https://instagram.com/_dev_samuel" target='blank'>
+            <button onmousemove="insta()" onmouseout="none()">
+                <i class="fab fa-instagram"></i>
+            </button>
+        </a>
+        <a href="" target='blank'>
+            <button onmousemove="whats()" onmouseout="none()">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+        </a>
+        <a href="https://www.tiktok.com/@dev_samuel" target='blank'>
+            <button onmousemove="tiktok()" onmouseout="none()">
+                <img src="tik-tok.png" width="30px" alt="tiktok_image">
+            </button>
+        </a>
+
+    </div>
+
+    <script>
+        var myAudio = document.getElementById("myAudio");
+        var foto = document.getElementById("foto");
+        var campo = document.getElementById('redes_sociais');
+        var shadow = document.getElementById('circulo')
+        var icon = document.getElementById('icon_music')
+
+        function efeitoSombra() {
+            shadow.classList.toggle('shadow_efect')
+        }
+        function musica() {
+            return myAudio.paused ? myAudio.play() : myAudio.pause();
+        }
+        
+        function icone() {
+            icon.classList.toggle('fa-play')
+            icon.classList.toggle('fa-pause')
+        }
+
+        function rodar() {
+            foto.classList.toggle("rodar");
+        }
+
+        function git() {
+            campo.innerText ='Siga-me! samuelslvsza'
+        }
+        function insta() {
+            campo.innerText ='Siga-me! @_dev_samuel'
+        }
+        function whats() {
+            campo.innerText ='(19) 97170-6243'
+        }
+        function tiktok() {
+            campo.innerText ='Siga-me! @dev_samuel'
+        }
+        function none() {
+            campo.innerText ='Siga-me!'
+        }
+    </script>
+</body>
+</html>
