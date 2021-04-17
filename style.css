@@ -7,18 +7,10 @@
 html {
     overflow-x: hidden;
     width: 100%;
-<<<<<<< HEAD
     background: url('fundonovo.png');
     /* background-attachment: scroll;   */
     background-position: 0% 0%;
 
-=======
-    height: 100%;
-    /* background-color: #202020; */
-    background: url('fundo.png');
-    background-size: 100%;
-    background-attachment: fixed;
->>>>>>> 918432d757280f6df82dc231f78e1d18533da6a2
 }
 body {
     overflow-x: hidden;
