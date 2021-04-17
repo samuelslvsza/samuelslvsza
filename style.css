@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 * {
+    outline: none;
     box-sizing: border-box;
     font-family: 'Anton', sans-serif;
 }
 html {
     overflow-x: hidden;
     width: 100%;
-    height: 100%;
-    /* background-color: #202020; */
-    background: url('fundo.png') no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
+    background: url('fundonovo.png');
+    /* background-attachment: scroll;   */
+    background-position: 0% 0%;
+
 }
 body {
     overflow-x: hidden;
@@ -63,16 +63,16 @@ a {
         box-shadow: 0px 0px 30px #05FF00;
     }
 }
-
-#musica i {
-    margin: 0 49%;
+#icon {
+    display: flex;
+}
+#icon i {
+    margin: 0 auto;
     cursor: pointer;
     color: white;
     font-size: 25px;
 }
-
-
-#musica i:hover {
+#icon i:hover {
     color: red;
     transition: 0.3s;
 }
@@ -93,15 +93,11 @@ p {
     font-size: 22px;
 }
 button {
-    /* margin: 10px auto; */
-    /* display: flex; */
     border-radius: 50px;
     border: solid #FFC700;
     padding: 35%;
     color: #ffffff;
-    /* background-image: linear-gradient(45deg, #05FF00, #0500FF); */
-    background-color: #202020;
-    box-shadow: 0px 0px 15px #FFC700;
+    background-color: transparent;
 }
 button:hover {
     transform: translateY(-7px);
