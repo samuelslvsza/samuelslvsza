@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 * {
+    outline: none;
     box-sizing: border-box;
     font-family: 'Anton', sans-serif;
 }
 html {
     overflow-x: hidden;
     width: 100%;
-    height: 100%;
-    /* background-color: #202020; */
-    background: url('fundo.png') no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
+    background-color: #ffb000;
 }
 body {
     overflow-x: hidden;
@@ -25,54 +22,50 @@ a {
 }
 
 #photo {
+    margin-top: 10px;
     height: 100%;
     width: 100%;
 }
-#foto {
-    margin: 30px auto;
-    display: flex;
-}
 
-#circulo {
+#agulha, #vitrola, #foto {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    display: grid;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    box-shadow: 0px 0px 20px white;
-    border-radius: 50%;
 }
-.shadow_efect {
-    animation: shadow linear infinite 10s;
+#foto {
+    opacity: 0;
 }
-@keyframes shadow {
-    0% {
-        box-shadow: 0px 0px 20px white;
+
+#icon {
+    margin-top: 330px;
+    display: flex;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+    #foto {
+        width: 180px;
     }
-    25% {
-        box-shadow: 0px 0px 30px #FFC700;
+    #agulha {
+        width: 300px;
     }
-    50% {
-        box-shadow: 0px 0px 30px #0500FF;
+    #vitrola {
+        width: 300px;
     }
-    75% {
-        box-shadow: 0px 0px 30px #05FF00;
+    #icon {
+        margin-top: 220px;
     }
 }
 
-#musica i {
-    margin: 0 49%;
+
+#icon i {
+    margin: 0 auto;
     cursor: pointer;
-    color: white;
+    color: #202020;
     font-size: 25px;
 }
-
-
-#musica i:hover {
+#icon i:hover {
     color: red;
     transition: 0.3s;
 }
@@ -80,46 +73,76 @@ a {
 .rodar {
     animation: rodar linear infinite 8s;
 }
+.tocar {
+    animation: mexer_agulha alternate-reverse infinite ease-in-out 0.2s;
+}
 
 @keyframes rodar {
+    0% {
+        opacity: 1;
+
+    }
     100% {
         transform: rotate(360deg);
+        opacity: 1;
+
+    }
+}
+@keyframes mexer_agulha {
+    50% {
+        transform: rotate(0.5deg);
+        
+    }
+    100% {
+        transform: rotate(-0.5deg);
+
     }
 }
 
 p {
     text-align: center;
-    color: white;
+    color: #202020;
     font-size: 22px;
 }
 button {
-    /* margin: 10px auto; */
-    /* display: flex; */
     border-radius: 50px;
-    border: solid #FFC700;
+    border: solid black;
     padding: 35%;
     color: #ffffff;
-    /* background-image: linear-gradient(45deg, #05FF00, #0500FF); */
-    background-color: #202020;
-    box-shadow: 0px 0px 15px #FFC700;
+    background-color: transparent;
 }
 button:hover {
     transform: translateY(-7px);
     transition: 0.5s;
     cursor: pointer;
 }
+#papel {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    left: 30px;
+    right: 0;
+}
 #div {
+    position: absolute;
     border-radius: 20px;
     width: 80%;
-    margin: auto;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 #div a {
     margin: 0px 25px;
 }
-@media screen and (max-width: 760px) {
+#div i {
+    color: black;
+}
+@media screen and (max-width: 450px) {
     #nome {
         width: 250px;
     }
@@ -129,6 +152,35 @@ button:hover {
     #div button {
         padding: 6px;
     }
+    #papel {
+        width: 310px;
+        left: 5px;
+        margin-top: 30px;
+
+    }
+}
+@media screen and (max-width: 300px) {
+    #nome {
+        width: 200px;
+    }
+
+    #papel {
+        width: 270px;
+        left: 5px;
+        margin-top: 30px;
+    }
+    #div button {
+        padding: 4px;
+    }
+    #foto {
+        width: 162px;
+    }
+    #agulha {
+        width: 270px;
+    }
+    #vitrola {
+        width: 270px;
+    }
 }
 
 #div i {
@@ -136,9 +188,10 @@ button:hover {
 }
 #redes_sociais {
     text-align: center;
-    color: #FFC700;
+    color: white;
     font-size: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 35px;
+    margin-top: 25px;
 }
 
 #web_atom {

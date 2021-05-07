@@ -9,38 +9,43 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+    <link rel="shortcut icon" href="fotonova.png" type="image/x-icon">
+
     <audio  id="myAudio" src="ＡＵＴＵＭＮ　ＣＨＩＬＬ.mp3" loop></audio>
 
 </head>
 <body>
     <div id="musica">
         <div id="photo">
-            <div id="circulo">
-            </div>
-            <img src="foto2.png" width="200px" id="foto">
+
+            <img src="vitrolacomigo.png" width="440px" id="vitrola">
+            <img src="disco.png" width="266px" id="foto">
+            <img src="agulha.png" alt="agulha" width="440px" id="agulha">
         </div>
-
-        <i id="icon_music" class="fas fa-play" onclick="musica(); rodar(); efeitoSombra(); icone()"></i>
-        <!-- <h1>Samuel Silva</h1> -->
-        <img src="nome.png" id="nome" alt="">
-        <p>Olá! Eu amei te ver por aqui, seja bem-vindo(a) e fique à vontade!</p>
-        <p>Sou um Júnior na programação, com experiências em JavaScript, React, e HTML & CSS</p>
-
-
     </div>
-        <div id="redes_sociais">Siga-me!</div>
+    <div id="icon">
+        <i id="icon_music" class="fas fa-play" onclick="musica(); rodar(); tocar(); icone()"></i>
+    </div>
+    <img src="nome.png" id="nome" alt="">
+    <p>Olá! Eu amei te ver por aqui, seja bem-vindo(a) e fique à vontade!</p>
+    <p>Sou um Júnior na programação, com experiências em JavaScript, React, e HTML & CSS</p>
+    <img src="papel.png" alt="papel" width="440px" id="papel">
+    <div id="redes_sociais">Siga-me!</div>
+
     <div id="div">
+
         <a href="https://github.com/samuelslvsza" target='blank'>
             <button onmousemove="git()" onmouseout="none()">
                 <i class="fab fa-github"></i>
             </button>
         </a>
-        <a href="https://instagram.com/_dev_samuel" target='blank'>
+
+        <a href="https://instagram.com/samuel.coding" target='blank'>
             <button onmousemove="insta()" onmouseout="none()">
                 <i class="fab fa-instagram"></i>
             </button>
         </a>
-        <a href="https://www.tiktok.com/@dev_samuel" target='blank'>
+        <a href="https://www.tiktok.com/@samuel.coding" target='blank'>
             <button onmousemove="tiktok()" onmouseout="none()">
                 <img src="tik-tok.png" width="30px" alt="tiktok_image">
             </button>
@@ -54,7 +59,7 @@
     </div>
     <div id="web_atom">
         <a href="https://webatom.com.br/links/" style="text-decoration: none; margin-top: 50px;" target="blank">
-            <p style="color: #FFC700;">Conheça a minha empresa</p>
+            <p style="color: #FB5012; margin-top: 150px;">Conheça a minha empresa</p>
             <img src="logo 3d.png" width="250px" alt="">
             <p style="color: rgb(0, 132, 255);">Web Atom</p>
 
@@ -64,13 +69,10 @@
     <script>
         var myAudio = document.getElementById("myAudio");
         var foto = document.getElementById("foto");
+        var braco = document.getElementById('agulha');
         var campo = document.getElementById('redes_sociais');
-        var shadow = document.getElementById('circulo')
         var icon = document.getElementById('icon_music')
 
-        function efeitoSombra() {
-            shadow.classList.toggle('shadow_efect')
-        }
         function musica() {
             return myAudio.paused ? myAudio.play() : myAudio.pause();
         }
@@ -79,22 +81,25 @@
             icon.classList.toggle('fa-play')
             icon.classList.toggle('fa-pause')
         }
-
+        
         function rodar() {
             foto.classList.toggle("rodar");
+        }
+        function tocar() {
+            braco.classList.toggle("tocar");
         }
 
         function git() {
             campo.innerText ='Siga-me! samuelslvsza'
         }
         function insta() {
-            campo.innerText ='Siga-me! @_dev_samuel'
+            campo.innerText ='Siga-me! @samuel.coding'
         }
         function whats() {
             campo.innerText ='(19) 97170-6243'
         }
         function tiktok() {
-            campo.innerText ='Siga-me! @dev_samuel'
+            campo.innerText ='Siga-me! @samuel.coding'
         }
         function none() {
             campo.innerText ='Siga-me!'
