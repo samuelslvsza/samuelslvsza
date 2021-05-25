@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,49 +9,123 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <link rel="shortcut icon" href="fotonova.png" type="image/x-icon">
+    <link rel="shortcut icon" href="disco.png" type="image/x-icon">
 
     <audio  id="myAudio" src="ＡＵＴＵＭＮ　ＣＨＩＬＬ.mp3" loop></audio>
 
 </head>
 <body>
+    <div class="particles_none" id="div_particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+
+
+    <button id="tema" onclick="mudarfundo(); particulas(); mudartexto(); display()"><i class="far fa-undo"></i></button>
     <div id="musica">
         <div id="photo">
 
             <img src="vitrolacomigo.png" width="440px" id="vitrola">
             <img src="disco.png" width="266px" id="foto">
             <img src="agulha.png" alt="agulha" width="440px" id="agulha">
+
+            <img src="vitrolacomigo - invertido.png" width="440px" id="vitrola_inv" class="display_none">
+            <img src="disco - invertido.png" width="266px" id="foto_inv" class="display_none">
+            <img src="agulha - invertido.png" alt="agulha" width="440px" id="agulha_inv" class="display_none">
         </div>
     </div>
     <div id="icon">
-        <i id="icon_music" class="fas fa-play" onclick="musica(); rodar(); tocar(); icone()"></i>
+        <i id="icon_music" class="fas fa-play" onclick="musica(); rodar(); tocar(); rodar2(); tocar2; icone()"></i>
     </div>
-    <img src="nome.png" id="nome" alt="">
-    <p>Olá! Eu amei te ver por aqui, seja bem-vindo(a) e fique à vontade!</p>
-    <p>Sou um Júnior na programação, com experiências em JavaScript, React, e HTML & CSS</p>
+    <div id="div_samuelname">
+        <img src="nome novo.png" id="samuel_nome_preto" alt="nome">
+        <img src="SAMUEL GLITCH.gif" id="samuel_neon" class="display_none" alt="glitch">
+    </div>
+    <p id="texto">Olá! Eu amei te ver por aqui, seja bem-vindo(a) e fique à vontade!</p>
+    <p id="texto2">Sou um Júnior na programação, com experiências em JavaScript, React, e HTML & CSS</p>
     <img src="papel.png" alt="papel" width="440px" id="papel">
+    <img src="papel - invertido.png" alt="papel" width="440px" id="papel_inv" class="display_none">
+
     <div id="redes_sociais">Siga-me!</div>
 
     <div id="div">
 
         <a href="https://github.com/samuelslvsza" target='blank'>
-            <button onmousemove="git()" onmouseout="none()">
+            <button class="seguir" onmousemove="git()" onmouseout="none()">
                 <i class="fab fa-github"></i>
             </button>
         </a>
 
         <a href="https://instagram.com/samuel.coding" target='blank'>
-            <button onmousemove="insta()" onmouseout="none()">
+            <button class="seguir" onmousemove="insta()" onmouseout="none()">
                 <i class="fab fa-instagram"></i>
             </button>
         </a>
         <a href="https://www.tiktok.com/@samuel.coding" target='blank'>
-            <button onmousemove="tiktok()" onmouseout="none()">
+            <button class="seguir" onmousemove="tiktok()" onmouseout="none()">
                 <img src="tik-tok.png" width="30px" alt="tiktok_image">
             </button>
         </a>
         <a href="https://api.whatsapp.com/send?phone=5519971706243&text=Fala%20Samuel%2C%20beleza%3F%20Me%20interessei%20pelo%20seu%20trabalho%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA!%20" target='blank'>
-            <button onmousemove="whats()" onmouseout="none()">
+            <button class="seguir" onmousemove="whats()" onmouseout="none()">
                 <i class="fab fa-whatsapp"></i>
             </button>
         </a>
@@ -67,15 +141,59 @@
     </div>
 
     <script>
+        var ap = document.getElementById('texto');
+        var ap2 = document.getElementById('texto2');
+        var sigaMe = document.getElementById('redes_sociais')
+        var mudarnome = document.getElementById('samuel_nome_preto')
+        var mudarnome2 = document.getElementById('samuel_neon')
+        var particles = document.getElementById('div_particles');
+        var fundo = document.getElementById('html');
         var myAudio = document.getElementById("myAudio");
         var foto = document.getElementById("foto");
         var braco = document.getElementById('agulha');
+        var vitrola = document.getElementById('vitrola');
+        var fotoInv = document.getElementById("foto_inv");
+        var bracoInv = document.getElementById('agulha_inv');
+        var vitrolaInv = document.getElementById('vitrola_inv')
+        var papel = document.getElementById('papel');
+        var papelInv = document.getElementById('papel_inv');
+
         var campo = document.getElementById('redes_sociais');
         var icon = document.getElementById('icon_music')
+
+        function mudartexto() {
+            ap.classList.toggle('textonovo');
+            ap2.classList.toggle('textonovo');
+            sigaMe.classList.toggle('textonovo2')
+        }
+        
+        function mudarfundo() {
+            fundo.classList.toggle('background')
+        }
+
+        function display() {
+            mudarnome.classList.toggle('display_none')
+            mudarnome2.classList.toggle('display_none')
+            fotoInv.classList.toggle('display_none')
+            bracoInv.classList.toggle('display_none')
+            vitrolaInv.classList.toggle('display_none')
+            vitrola.classList.toggle('display_none')
+            braco.classList.toggle('display_none')
+            foto.classList.toggle('display_none')
+            papel.classList.toggle('display_none')
+            papelInv.classList.toggle('display_none')
+
+        }
+
+        function particulas() {
+            particles.classList.toggle('particles_none')
+        }
 
         function musica() {
             return myAudio.paused ? myAudio.play() : myAudio.pause();
         }
+
+
         
         function icone() {
             icon.classList.toggle('fa-play')
@@ -87,6 +205,14 @@
         }
         function tocar() {
             braco.classList.toggle("tocar");
+            bracoInv.classList.toggle("tocar");
+        }
+
+        function rodar2() {
+            fotoInv.classList.toggle("rodar");
+        }
+        function tocar2() {
+            bracoInv.classList.toggle("tocar");
         }
 
         function git() {
